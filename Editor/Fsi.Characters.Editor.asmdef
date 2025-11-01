@@ -1,0 +1,19 @@
+{
+    "name": "Fsi.Characters.Editor",
+    "rootNamespace": "Fsi.Characters",
+    "references": [
+        "GUID:ff3151e387f3d42e1b5e8c10871ccc37",
+        "GUID:ceb6e2845d6144c74b52e9664ea7fa88",
+        "GUID:ee475a89c5e34c06bfdb1064b3a78a63",
+        "GUID:d01539a91a51f41e884d80a7bdf27f86"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
