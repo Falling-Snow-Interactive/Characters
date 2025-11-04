@@ -1,12 +1,13 @@
 using System.Collections.Generic;
+using Fsi.Characters.Data;
 using Fsi.Characters.Settings;
 using UnityEditor;
 
 namespace Fsi.Characters.Selector
 {
-    [CustomPropertyDrawer(typeof(NpcSelectorAttribute))]
-    public class NpcSelectorAttributeDrawer : CharacterSelectorAttributeDrawer<NpcData>
+    [CustomPropertyDrawer(typeof(NPCSelectorAttribute))]
+    public class NpcSelectorAttributeDrawer : CharacterSelectorAttributeDrawer<NPCData>
     {
-        protected override List<NpcData> GetData() => CharactersSettings.NPCs;
+        protected override List<NPCData> GetData() => CharactersSettings.NPCs;
     }
 }

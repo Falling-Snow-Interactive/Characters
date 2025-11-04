@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Fsi.Characters.Data;
 using UnityEditor;
 using UnityEngine;
 
@@ -15,8 +16,8 @@ namespace Fsi.Characters.Settings
         [Header("Library")]
 
         [SerializeField]
-        private List<NpcData> npcs = new(); // ReSharper disable once InconsistentNaming
-        public static List<NpcData> NPCs => Settings.npcs;
+        private List<NPCData> npcs = new(); // ReSharper disable once InconsistentNaming
+        public static List<NPCData> NPCs => Settings.npcs;
 
         [SerializeField]
         private List<EnemyData> enemies = new();

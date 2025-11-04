@@ -1,9 +1,9 @@
 using UnityEngine;
 
-namespace Fsi.Characters
+namespace Fsi.Characters.Data
 {
     [CreateAssetMenu(menuName = "Fsi/Character/NPC", fileName = "New NPC Data")]
-    public class NpcData : CharacterData
+    public class NPCData : CharacterData
     {
     }
 }
