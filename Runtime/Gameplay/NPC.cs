@@ -1,5 +1,4 @@
 using Fsi.Characters.Data;
-using Fsi.Characters.Selector;
 using UnityEngine;
 
 namespace Fsi.Characters.Gameplay
@@ -11,7 +10,7 @@ namespace Fsi.Characters.Gameplay
     {
         public override CharacterData Data => npcData;
         
-        [NPCSelector]
+        // [NPCSelector]
         [SerializeField]
         private NPCData npcData;
         public NPCData NPCData => npcData;

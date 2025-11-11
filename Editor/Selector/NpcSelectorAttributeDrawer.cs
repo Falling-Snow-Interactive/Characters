@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Fsi.Characters.Data;
+using Fsi.Characters.Data.Selector;
 using Fsi.Characters.Settings;
 using UnityEditor;
 
