@@ -1,33 +1,29 @@
-using System.Collections.Generic;
 using Fsi.Characters.Data;
+using Fsi.DataSystem.Libraries;
 using UnityEditor;
 using UnityEngine;
 
 namespace Fsi.Characters.Settings
 {
-    public class CharactersSettings : ScriptableObject
+    public class CharacterSettings : ScriptableObject
     {
         private const string ResourcePath = "Settings/Characters Settings";
         private const string FullPath = "Assets/Resources/" + ResourcePath + ".asset";
 
-        private static CharactersSettings settings;
-        public static CharactersSettings Settings => settings ??= GetOrCreateSettings();
+        private static CharacterSettings settings;
+        public static CharacterSettings Settings => settings ??= GetOrCreateSettings();
 
-        [Header("Library")]
-
-        [SerializeField]
-        private List<NPCData> npcs = new(); // ReSharper disable once InconsistentNaming
-        public static List<NPCData> NPCs => Settings.npcs;
+        [Header("Libraries")]
 
         [SerializeField]
-        private List<EnemyData> enemies = new();
-        public static List<EnemyData> Enemies => Settings.enemies;
+        private Library<CharacterData,string> characters = new(); // ReSharper disable once InconsistentNaming
+        public static Library<CharacterData,string> Characters => Settings.characters;
 
         #region Settings
 
-        private static CharactersSettings GetOrCreateSettings()
+        private static CharacterSettings GetOrCreateSettings()
         {
-            CharactersSettings set = Resources.Load<CharactersSettings>(ResourcePath);
+            CharacterSettings set = Resources.Load<CharacterSettings>(ResourcePath);
 
             #if UNITY_EDITOR
             if (!set)
@@ -42,7 +38,7 @@ namespace Fsi.Characters.Settings
                     AssetDatabase.CreateFolder("Assets/Resources", "Settings");
                 }
 
-                set = CreateInstance<CharactersSettings>();
+                set = CreateInstance<CharacterSettings>();
                 AssetDatabase.CreateAsset(set, FullPath);
                 AssetDatabase.SaveAssets();
             }

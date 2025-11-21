@@ -1,10 +1,15 @@
+using System.Collections.Generic;
 using Fsi.Characters.Data;
+using Fsi.Characters.Data.Selector;
+using Fsi.Characters.Settings;
 using Fsi.DataSystem.Selectors;
+using UnityEditor;
 
 namespace Fsi.Characters.Selector
 {
-    public abstract class CharacterSelectorAttributeDrawer<TChar> : SelectorAttributeDrawer<TChar,string> 
-        where TChar : CharacterData
+    [CustomPropertyDrawer(typeof(CharacterSelectorAttribute))]
+    public class CharacterSelectorAttributeDrawer : SelectorAttributeDrawer<CharacterData,string> 
     {
+        protected override List<CharacterData> GetEntries() => CharacterSettings.Characters.Entries;
     }
 }

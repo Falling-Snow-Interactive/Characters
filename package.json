@@ -17,7 +17,9 @@
   },
   "hideInEditor": false,
   "dependencies": {
+    "com.fallingsnowinteractive.general": "0.0.1",
     "com.fallingsnowinteractive.localization": "0.0.1",
-    "com.fallingsnowinteractive.datasystem": "0.0.1"
+    "com.fallingsnowinteractive.datasystem": "0.0.1",
+    "com.fallingsnowinteractive.gameplay": "0.1.2"
   }
 }

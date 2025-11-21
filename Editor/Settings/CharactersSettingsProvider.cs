@@ -26,7 +26,7 @@ namespace Fsi.Characters.Settings
             root.style.marginLeft = 5;
             root.style.marginBottom = 5;
     
-            SerializedObject settingsProp = CharactersSettings.GetSerializedSettings();
+            SerializedObject settingsProp = CharacterSettings.GetSerializedSettings();
         
             Label title = new("Characters Settings");
             root.Add(title);
