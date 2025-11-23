@@ -1,5 +1,3 @@
-using System;
-using DG.DemiEditor;
 using Fsi.DataSystem;
 using Fsi.General.Sprites.Preview;
 using UnityEditor;
@@ -41,11 +39,8 @@ namespace Fsi.Characters.Data
         {
             #if UNITY_EDITOR
 
-            if (ID.IsNullOrEmpty())
-            {
-                ID = "npc_";
-            }
-            
+            ID ??= "npc_";
+
             if (!portrait)
             {
                 Sprite portraitRef = AssetDatabase.LoadAssetAtPath<Sprite>(DefaultPortraitPath);

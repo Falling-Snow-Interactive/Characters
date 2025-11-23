@@ -16,8 +16,8 @@ namespace Fsi.Characters.Settings
         [Header("Libraries")]
 
         [SerializeField]
-        private Library<CharacterData,string> characters = new(); // ReSharper disable once InconsistentNaming
-        public static Library<CharacterData,string> Characters => Settings.characters;
+        private Library<string, CharacterData> characters = new(); // ReSharper disable once InconsistentNaming
+        public static Library<string, CharacterData> Characters => Settings.characters;
 
         #region Settings
 

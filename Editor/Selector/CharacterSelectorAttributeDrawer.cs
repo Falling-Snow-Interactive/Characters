@@ -8,7 +8,7 @@ using UnityEditor;
 namespace Fsi.Characters.Selector
 {
     [CustomPropertyDrawer(typeof(CharacterSelectorAttribute))]
-    public class CharacterSelectorAttributeDrawer : SelectorAttributeDrawer<CharacterData,string> 
+    public class CharacterSelectorAttributeDrawer : SelectorAttributeDrawer<string, CharacterData> 
     {
         protected override List<CharacterData> GetEntries() => CharacterSettings.Characters.Entries;
     }
