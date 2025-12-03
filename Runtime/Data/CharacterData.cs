@@ -5,13 +5,13 @@ using UnityEngine;
 
 namespace Fsi.Characters.Data
 {
-    [CreateAssetMenu(menuName = "Fsi/Characters/Data", fileName = "New Character Data")]
+    [CreateAssetMenu(menuName = Menu + "Data", fileName = "New Character Data")]
     public class CharacterData : ScriptableData<string>
     {
         #region Constants
         
         // Asset Menu
-        protected new const string Menu = ScriptableData<string>.Menu + "Characters/";
+        private new const string Menu = ScriptableData<string>.Menu + "Characters/";
 
         // Default Assets
         private const string DefaultPortraitPath = "Packages/com.fallingsnowinteractive.characters/Assets/Placeholder/Placeholder_Character_Portrait.png";

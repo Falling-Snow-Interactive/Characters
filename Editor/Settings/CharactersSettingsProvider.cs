@@ -1,7 +1,7 @@
-using Fsi.Ui.Spacers;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
+using Spacer = Fsi.Ui.Dividers.Spacer;
 
 namespace Fsi.Characters.Settings
 {
@@ -10,7 +10,7 @@ namespace Fsi.Characters.Settings
         [SettingsProvider]
         public static SettingsProvider CreateSettingsProvider()
         {
-            SettingsProvider provider = new("Fsi/Characters", SettingsScope.Project)
+            SettingsProvider provider = new("Falling Snow Interactive/Characters", SettingsScope.Project)
             {
                 label = "Characters",
                 activateHandler = OnActivate,
